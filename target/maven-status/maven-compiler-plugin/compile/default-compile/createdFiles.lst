@@ -1,0 +1,15 @@
+mad/chat_data/persist/domain/services/RedisCacheService.class
+mad/chat_data/persist/domain/repositories/ConversationRepository.class
+mad/chat_data/persist/config/WebSocketConfig.class
+mad/chat_data/persist/domain/repositories/MessageRepository.class
+mad/chat_data/persist/ChatWebSocketHandler.class
+mad/chat_data/persist/domain/models/User.class
+mad/chat_data/persist/config/WebConfig.class
+mad/chat_data/persist/PersistApplication.class
+mad/chat_data/persist/api/UserSynchronizeController.class
+mad/chat_data/persist/domain/services/ChatService.class
+mad/chat_data/persist/api/ChatController.class
+mad/chat_data/persist/domain/repositories/UserRepository.class
+mad/chat_data/persist/domain/models/Message.class
+mad/chat_data/persist/domain/models/Conversation.class
+mad/chat_data/persist/tools/JwtTokenValidator.class

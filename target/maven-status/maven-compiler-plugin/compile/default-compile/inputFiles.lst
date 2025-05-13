@@ -1,0 +1,15 @@
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/ChatWebSocketHandler.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/PersistApplication.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/api/ChatController.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/api/UserSynchronizeController.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/config/WebConfig.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/config/WebSocketConfig.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/models/Conversation.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/models/Message.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/models/User.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/repositories/ConversationRepository.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/repositories/MessageRepository.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/repositories/UserRepository.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/services/ChatService.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/domain/services/RedisCacheService.java
+/home/mad/Deploiement/persist/src/main/java/mad/chat_data/persist/tools/JwtTokenValidator.java
