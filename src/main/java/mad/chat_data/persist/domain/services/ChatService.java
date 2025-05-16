@@ -1,7 +1,6 @@
 package mad.chat_data.persist.domain.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import mad.chat_data.persist.ChatWebSocketHandler;
 import mad.chat_data.persist.domain.models.Conversation;
 import mad.chat_data.persist.domain.models.Message;
 import mad.chat_data.persist.domain.models.User;
@@ -12,12 +11,9 @@ import mad.chat_data.persist.tools.JwtTokenValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.web.socket.WebSocketSession;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.BiConsumer;
-import java.util.stream.Collectors;
 
 @Service
 public class ChatService {
@@ -25,22 +21,20 @@ public class ChatService {
 
 
     //=======================================  SERVICES  ==============================================================
-    //private final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
-    //private final ChatWebSocketHandler webSocketHandler;
+
     private final UserRepository userRepository;
     private final MessageRepository messageRepository;
     private final ConversationRepository conversationRepository;
     private final RedisCacheService redisCacheService;
     private final ObjectMapper mapper = new ObjectMapper();
-    private JwtTokenValidator jwtTokenValidator;
 
-    public ChatService( UserRepository userRepository, MessageRepository messageRepository, ConversationRepository conversationRepository, RedisCacheService redisCacheService, JwtTokenValidator jwtTokenValidator) {
+    public ChatService( UserRepository userRepository, MessageRepository messageRepository, ConversationRepository conversationRepository, RedisCacheService redisCacheService) {
        // this.webSocketHandler = webSocketHandler;
         this.userRepository = userRepository;
         this.messageRepository = messageRepository;
         this.conversationRepository = conversationRepository;
         this.redisCacheService = redisCacheService;
-        this.jwtTokenValidator = jwtTokenValidator;
+
     }
 
     //===================================== [ GESTION DES SESSIONS ] ===================================================
