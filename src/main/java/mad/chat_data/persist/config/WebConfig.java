@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
                 //.allowedOrigins("http://192.168.1.179:4200", "http://192.168.1.124:4200", "http://localhost:4200")
-                .allowedOrigins("*")
+                .allowedOrigins("https://chat-auth-j6ww.onrender.com", "https://chat-auth-j6ww.onrender.com/**")
                 .allowedMethods("GET", "POST", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
