@@ -63,6 +63,7 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         try {
             Claims claims = Jwts.parser()
                     .setSigningKey(SECRET_KEY)
+                    .build()
                     .parseClaimsJws(token)
                     .getBody();
             String userId = claims.getSubject();
