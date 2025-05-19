@@ -25,6 +25,7 @@ public class JwtTokenValidator {
     private Claims extractAllClaims(String token) {
         return Jwts.parser()
                 .setSigningKey(secret)
+                .build()
                 .parseClaimsJws(token)
                 .getBody();
     }
@@ -33,6 +34,7 @@ public class JwtTokenValidator {
         try {
             Jwts.parser()
                     .setSigningKey(secret)
+                    .build()
                     .parseClaimsJws(token);
             return true;
         } catch (Exception e) {
