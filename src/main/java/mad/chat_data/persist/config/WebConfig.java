@@ -1,5 +1,6 @@
 package mad.chat_data.persist.config;
 
+import mad.chat_data.persist.domain.constant.UrlsApisExternes;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -10,9 +11,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                //.allowedOrigins("http://192.168.1.179:4200", "http://192.168.1.124:4200", "http://localhost:4200")
-                .allowedOrigins("https://chat-auth-j6ww.onrender.com", "https://chat-client-e2lv.onrender.com")
-                .allowedMethods("GET", "POST", "OPTIONS")
+                .allowedOrigins(UrlsApisExternes.getUrls()[0], UrlsApisExternes.getUrls()[1])
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
