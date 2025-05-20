@@ -142,6 +142,10 @@ public List<Message> getRecentMessages(String conversationId) {
      * @param userData
      */
     public void synchronizeUserWithPersist(Map<String, String> userData) {
+        logger.info("Request de synchronisation reçu : {}", userData);
+        if (userData.isEmpty() || userData.get("userId") == null || userData.get("username") == null || userData.get("email") == null) {
+            throw new RuntimeException("Données manquantes pour la synchronisation");
+        }
         String userId = userData.get("userId"); // Fourni par API authentification
         String username = userData.get("username");
         String email = userData.get("email");
@@ -155,7 +159,7 @@ public List<Message> getRecentMessages(String conversationId) {
         user.setStatus(status);
         userRepository.save(user);
 
-        logger.info("User synchronized in database: " + user.getUsername());
+        logger.info("User {} synchronized in database", user.getUsername());
     }
 
     public List<User> getOnlineUsers() {
