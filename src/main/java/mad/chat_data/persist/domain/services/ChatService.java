@@ -142,7 +142,7 @@ public List<Message> getRecentMessages(String conversationId) {
      * @param userData
      */
     public void synchronizeUserWithPersist(Map<String, String> userData) {
-        logger.info("Request de synchronisation reçu : {}", userData);
+        logger.info("Requête de synchronisation reçu : {}", userData);
         if (userData.isEmpty() || userData.get("userId") == null || userData.get("username") == null || userData.get("email") == null) {
             throw new RuntimeException("Données manquantes pour la synchronisation");
         }
